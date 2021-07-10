@@ -20,7 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Simple example</h1>
+      <h1>Example 1</h1>
+      <p>No async , simple redux store udpate</p>
       <form onSubmit={handleSubmit}>
         <label>
           Name:
