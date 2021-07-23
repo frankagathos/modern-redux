@@ -18,12 +18,10 @@ const msgReducer = (state = initState, action) => {
             return {
                 ...state, msg: action.payload
             }
-            default:
-                return state;
+        default:
+            return state;
     }
-
-
 }
 //selectors
-export const selectMsg = state => state.msg
+export const selectMsg = state => state.msg // Name Selector Functions as selectThing (https://redux.js.org/style-guide/style-guide#name-selector-functions-as-selectthing)
 export default msgReducer

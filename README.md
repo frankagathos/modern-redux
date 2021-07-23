@@ -5,9 +5,13 @@ Simplified examples of modern redux in action.
 
 Separate the app into three folders:
 
- - application : contains redux store 
- - infrastructure : contains apis
- - presentation : contains our React components
+ - Application : contains business logic, redux store. 
+ - Infrastructure : contains apis 
+ - Presentation : contains React components
+## Useful links
+
+- [Redux Style Guide](https://redux.js.org/style-guide/style-guide)
+- ["ducks" pattern](https://github.com/erikras/ducks-modular-redux)
 
 ## Quick setup for your projects
 
