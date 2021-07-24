@@ -20,7 +20,7 @@ function Example1() {
     return (
         <div>
             <h1>Example 1</h1>
-            <p>No async , simple redux store update</p>
+            <p>Simple redux store update</p>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name &nbsp;

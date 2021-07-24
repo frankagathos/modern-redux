@@ -25,9 +25,8 @@ Separate the app into three folders:
 
 
 ## Example 1 
-
-- no async , simple state update. 
-
-
+- simple state update. 
+## Example 2
+- async data fetching
 ### `npm start` in your console to start dev env
 

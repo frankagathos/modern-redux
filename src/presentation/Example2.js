@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { useDispatch,useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getCountryInfo, selectCountryCapital, selectLoadingCountryCapital } from './../application/country';
 function Example2() {
     const [inputValue, setinputValue] = useState('')
     const dispatch = useDispatch()
     const countryCapital = useSelector(selectCountryCapital)
     const loadingCapital = useSelector(selectLoadingCountryCapital)
+
     const handleChange = (e) => {
         setinputValue(e.target.value)
     }
@@ -18,7 +19,8 @@ function Example2() {
     return (
         <div>
             <h1>Example 2</h1>
-            <p>Async</p>
+            <p>Async data fetching example.</p>
+            <p>Fetch a country's capital name.</p>
             <form onSubmit={handleSubmit}>
                 <label>
                     Country Name &nbsp;
@@ -26,6 +28,7 @@ function Example2() {
                 </label>
                 <input type="submit" value="Submit" />
             </form>
+            <div>capital:</div>
             {loadingCapital && <p>Loading...</p>}
             {!loadingCapital && <p>{countryCapital}</p>}
         </div>
