@@ -1,14 +1,13 @@
 import { configureStore} from '@reduxjs/toolkit'
 import logger from 'redux-logger'
-import msgReducer from './msg'
-import countryNameReducer from './country'
+import msg from './msg'
+import country from './country'
 import { createStore } from 'redux' //Step 1  : https://redux.js.org/api/createstore  OLD WAY
 
 const reducer = {
-  msg:msgReducer,  // exw provlima edw
-  country:countryNameReducer
+  msg,
+  country
 }
-
 
 const store = configureStore({
     reducer,
