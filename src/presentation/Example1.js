@@ -29,7 +29,7 @@ function Example1() {
                 <input type="submit" value="Submit" />
             </form>
             <div>
-                our message: {msg}
+                our message: {msg.msg}
             </div>
         </div>
     )
