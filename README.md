@@ -28,5 +28,8 @@ Separate the app into three folders:
 - simple state update. 
 ## Example 2
 - async data fetching
+## Example 3 (Modern Redux)
+
+- state update.
 ### `npm start` in your console to start dev env
 
