@@ -1,8 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { updateMsg, selectMsg } from '../application/msg'
+import { updateMsg, selectMsg } from '../../application/msg'
 import React, { useState } from 'react'
 
-function Example1() {
+function Msg() {
+    
     const msg = useSelector(selectMsg)
     const dispatch = useDispatch()
     const [inputValue, setinputValue] = useState('')
@@ -19,7 +20,7 @@ function Example1() {
 
     return (
         <div>
-            <h1>Example 1</h1>
+            <h1>Message example</h1>
             <p>Simple redux store update</p>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -35,4 +36,4 @@ function Example1() {
     )
 }
 
-export default Example1
+export default Msg

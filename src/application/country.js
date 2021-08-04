@@ -43,7 +43,6 @@ export const getCountryInfo = countryName => async (dispatch) => {
         .catch(err => {
             dispatch(updateCountryNameFail());
             console.log("error while fetching country info");
-            // console.log(err && err.message)
         })
 
 

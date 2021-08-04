@@ -1,15 +1,18 @@
 import './App.css';
-import Example1 from './Example1';
-import Example2 from './Example2';
-import Example3MR from './Example3MR'
+import Msg from './components/Msg';
+import Country from './components/Country';
+import Theme from './components/Theme'
+import Cat from './components/Cat';
 function App() {
   return (
     <div className="App">
-      <Example1 />
+      <Msg />
       <hr></hr>
-      <Example2 />
+      <Country />
       <hr></hr>
-      <Example3MR />
+      <Theme />
+      <hr></hr>
+      <Cat/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 # Modern Redux 
 
-Simplified examples of modern redux in action.
+Simplified examples of modern redux in action. Modern redux examples start from theme example.
 ### Clean architecture simplified
 
 Separate the app into three folders:
@@ -24,12 +24,13 @@ Separate the app into three folders:
 
 
 
-## Example 1 
-- simple state update. 
-## Example 2
-- async data fetching
-## Example 3 (Modern Redux)
-
-- state update.
+## Message Example 
+- simple state update 
+## Country Capital
+- async thunk data fetching example  
+## Theme example
+- state update in modern Redux
+## Cat image example
+- async thunk data fetching example in modern Redux
 ### `npm start` in your console to start dev env
 
