@@ -4,7 +4,7 @@ import { fetchCatImgUrl } from "../infrastructure/catAPI";
 // First, create the thunk
 export const getCatImgUrl = createAsyncThunk('cat/getImgUrl', fetchCatImgUrl)
 
-// then create the slice
+// Then create the slice
 const catSlice = createSlice({
     name: 'cat',
     initialState: {
