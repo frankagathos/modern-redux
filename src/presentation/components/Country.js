@@ -18,7 +18,7 @@ function Country() {
 
     return (
         <div>
-            <h1>Country's capital example</h1>
+            <h1>Country's capital </h1>
             <p>Async data fetching example.</p>
             <p>Fetch a country's capital name.</p>
             <form onSubmit={handleSubmit}>

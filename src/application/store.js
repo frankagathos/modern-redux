@@ -4,7 +4,7 @@ import msg from './msg'
 import country from './country'
 import themeSlice from './themeSlice'
 import catSlice from './catSlice'
-import { createStore } from 'redux' //Step 1  : https://redux.js.org/api/createstore  OLD WAY
+import { createStore } from 'redux'    //Classic way of creating store https://redux.js.org/api/createstore   
 
 const reducer = {
   msg,

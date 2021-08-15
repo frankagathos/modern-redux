@@ -20,7 +20,7 @@ function Msg() {
 
     return (
         <div>
-            <h1>Message example</h1>
+            <h1>Message</h1>
             <p>Simple redux store update</p>
             <form onSubmit={handleSubmit}>
                 <label>

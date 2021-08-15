@@ -9,7 +9,7 @@ function Cat() {
     const loading = useSelector(selectCatImgLoading)
     return (
         <div>
-            <h1>Modern Redux - Cat example</h1>
+            <h1>Cat (Modern Redux)</h1>
             <p>Fetch cat image</p>
             <button onClick={() => dispatch(getCatImgUrl())}>get cat image</button>
             {loading && <p>...loading</p>}
