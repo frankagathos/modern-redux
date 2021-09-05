@@ -3,6 +3,7 @@ import Msg from './components/Msg';
 import Country from './components/Country';
 import Theme from './components/Theme'
 import Cat from './components/Cat';
+import Users from './components/Users';
 function App() {
   return (
     <div className="App">
@@ -12,7 +13,9 @@ function App() {
       <hr></hr>
       <Theme />
       <hr></hr>
-      <Cat/>
+      <Cat />
+      <hr></hr>
+      <Users />
     </div>
   );
 }

@@ -29,4 +29,8 @@ We also try to follow below style of writing code.
 - state update in modern Redux [Theme](https://github.com/frankagathos/modern-redux/blob/main/src/presentation/components/Theme.js)
 - async thunk data fetching example in modern Redux [Cat image](https://github.com/frankagathos/modern-redux/blob/main/src/presentation/components/Cat.js)
 
+## json-server Examples
+
+- run npx json-server --watch data/db.json --port 8000
+
 ### `npm start` in your console to start dev env

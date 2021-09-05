@@ -4,6 +4,7 @@ import msg from './msg'
 import country from './country'
 import themeSlice from './themeSlice'
 import catSlice from './catSlice'
+import usersSlice from './usersSlice'
 import { createStore } from 'redux'    //Classic way of creating store https://redux.js.org/api/createstore   
 
 const reducer = {
@@ -11,6 +12,7 @@ const reducer = {
   country,
   theme: themeSlice,
   cat: catSlice,
+  users:usersSlice
 }
 
 const store = configureStore({
