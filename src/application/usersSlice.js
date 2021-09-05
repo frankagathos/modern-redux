@@ -13,29 +13,36 @@ const userSlice = createSlice({
         data: null,
         error: null
     },
-    extraReducers: {
-        [getUsers.pending]: state => { state.loading = true },
-        [getUsers.fulfilled]: (state, action) => {
-            state.loading = false;
-            state.data = action.payload
-        },
-        [getUsers.rejected]: (state, action) => {
-            state.loading = false;
-            state.error = action.error.message
-        },
-        [addNewUser.fulfilled]: (state, action) => {
-            state.data.push(action.payload);
-        },
-        [addNewUser.rejected]: (state, action) => {
-            state.error = action.error.message
-        },
-        [deleteUser.fulfilled]: (state, action) => {
+    extraReducers: (builder) => {
+        builder.addCase(getUsers.pending, state => { state.loading = true })
+        builder.addCase(
+            getUsers.fulfilled, (state, action) => {
+                state.loading = false;
+                state.data = action.payload
+            })
+        builder.addCase(
+            getUsers.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.error.message
+            }
+        )
+        builder.addCase(
+            addNewUser.fulfilled, (state, action) => {
+                state.data.push(action.payload);
+            }
+        )
+        builder.addCase(
+            addNewUser.rejected, (state, action) => {
+                state.error = action.error.message
+            }
+        )
+        builder.addCase(deleteUser.fulfilled, (state, action) => {
             const newUsers = state.data.filter(user => user.id !== action.payload)
             state.data = newUsers;
-        },
-        [deleteUser.rejected]: (state, action) => {
+        })
+        builder.addCase(deleteUser.rejected, (state, action) => {
             state.error = action.error.message
-        }
+        })
     }
 })
 
