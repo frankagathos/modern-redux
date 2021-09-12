@@ -4,13 +4,22 @@ const endpoint = "http://localhost:8000/"
 const usersApi = axios.create({ baseURL: endpoint })
 
 export const fetchUsers = async () => {
-  const resp = await usersApi.get("/users")
-  return resp.data
+  try {
+    const resp = await usersApi.get("users")
+    return resp.data
+  }
+  catch (err) {
+    throw err //display cached error - or could throw new error('Cannot fetch users')
+  }
 }
 export const createUser = async (user) => {
-  const resp = await usersApi.post("/users", user)
-  return resp.data
-
+  try {
+    const resp = await usersApi.post("/users", { "name": user })
+    return resp.data
+  }
+  catch (err) {
+    throw new Error('Cannot create player')
+  }
 }
 export const deleteUser = async ({ id }) => {
   try {
@@ -18,6 +27,6 @@ export const deleteUser = async ({ id }) => {
     return id
   }
   catch (error) {
-    return error.response;
+    throw error
   }
 }

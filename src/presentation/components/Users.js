@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { createUser } from '../../infrastructure/users'
 import { useDispatch, useSelector } from 'react-redux';
-import { addNewUser, deleteUser, getUsers, selectUsers,selectError} from '../../application/usersSlice';
+import { addNewUser, deleteUser, getUsers, selectUsers, selectError } from '../../application/usersSlice';
 const Users = () => {
     const dispatch = useDispatch()
     const users = useSelector(selectUsers)
@@ -9,7 +9,7 @@ const Users = () => {
     const [inputValue, setInputValue] = useState("")
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        dispatch(addNewUser({ "name": inputValue }))
+        dispatch(addNewUser(inputValue))
         setInputValue('')
     }
 
@@ -19,7 +19,7 @@ const Users = () => {
 
     useEffect(() => {
         dispatch(getUsers())
-    }, [])
+    }, [dispatch])
 
     return (
         <>
